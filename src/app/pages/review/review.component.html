@@ -1,0 +1,14 @@
+
+
+<div class="container mt-5">
+    <div class="row p-5">
+      <div class="col-lg-8">
+        <h2 class="text-white">Reviews</h2>
+        <div class="review" *ngFor="let review of review">
+          <p class="text-white">{{ review.user }}:</p>
+          <p class="text-white">{{ review.comment }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+

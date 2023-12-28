@@ -1,0 +1,116 @@
+
+
+
+
+
+
+.row {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+}
+
+.col-md-6 {
+  flex: 0 0 auto;
+}
+
+.list-group-item {
+  display: flex;
+  width: 100%;
+  height: 120px;
+  margin-bottom: 10px;
+  position: relative;
+  background-color: #242A32;
+}
+
+.list-group-item img {
+  max-width: 50%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.list-group-item .card-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background-color: #242A32;
+  color: white;
+  padding: 5px;
+  box-sizing: border-box;
+  font-size: 0.5rem; 
+}
+
+
+
+/* Add this to your global styles or component-specific styles */
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+#noResults {
+  color: white;
+  border: 2px solid white;
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.text-center h4 {
+  color: white;
+}
+
+.bottom-buttons-container button:hover {
+  text-decoration: underline;
+}
+
+.navbar {
+  padding: 15px;
+  background-color: #242A32;
+}
+
+.form-control {
+  width: 200px;
+  background-color: #242A32;
+  border: 1px solid #333;
+  color: #242A32;
+}
+
+.btn {
+  margin-left: 10px;
+  background-color: #242A32;
+  border: 1px solid #333;
+  color: white;
+}
+
+.btn:hover {
+  background-color: #333;
+}
+
+
+
+.container {
+  max-width: 400px;
+  margin: auto;
+}
+
+.input-group {
+  position: relative;
+  margin-bottom: 1rem;
+  background-color: #808080;
+}
+
+.form-control {
+  border-radius: 0;
+}
+
+.btn-outline-secondary {
+  border-radius: 0;
+}
+
+.input-group input,
+.input-group button {
+  flex: 1;
+  color: #808080;
+}

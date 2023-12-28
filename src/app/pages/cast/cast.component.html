@@ -1,0 +1,22 @@
+
+<div class="container mt-5">
+    <div class="row p-5">
+      <div class="col-lg-4">
+        <h2 class="text-white">Cast</h2>
+        <div class="row">
+          <div class="col-lg-6" *ngFor="let actor of getMovieCastResult">
+            <div class="row mt-2 mb-2">
+              <div class="col-lg-4" *ngIf="actor.profile_path">
+                <img src="https://image.tmdb.org/t/p/original/{{ actor.profile_path }}" class="img-fluid">
+              </div>
+              <div class="col-lg-8">
+                <h3 class="text-white">{{ actor.original_name }}</h3>
+                <p class="text-white">{{ actor.character }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

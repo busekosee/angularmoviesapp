@@ -1,0 +1,94 @@
+
+
+
+<div>
+  <div class="page-content">
+    <div class="header">
+      <p>What do you want to watch?</p>
+    </div>
+  <!-- ... (diğer kodlar) ... -->
+
+ <div class="input-group mb-3">
+  <input type="text" class="form-control" formControlName="movieName" placeholder="Enter movie name">
+  <a class="btn btn-outline-secondary" routerLink="/search">Search</a>
+ </div>
+
+
+
+    <!-- Slider için kullanılacak film listesi -->
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div *ngFor="let movie of bannerResult; let i = index" class="carousel-item" [ngClass]="{ 'active': i === 0 }"
+          data-bs-interval="10000">
+          <div class="d-flex justify-content-between align-items-center">
+
+            <div class="w-50">
+              <a [routerLink]="['/movie-details', movie.id]">
+              <img src="https://image.tmdb.org/t/p/original/{{ movie.backdrop_path }}" class="d-block w-100" alt="...">
+            </a>
+              
+            
+              
+             
+              </div>
+              <div class="carousel-caption d-none d-md-block">
+                <!-- Caption içeriği -->
+              </div>
+            
+          </div>
+          <p class="film-order">{{ i + 1 }}</p>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+    <div class="categories">
+      <button routerLink="now_playing" routerLinkActive="active-link">Now Playing</button>
+      <button routerLink="upcoming" routerLinkActive="active-link">Upcoming</button>
+      <button routerLink="top_rated" routerLinkActive="active-link">Top Rated</button>
+      <button routerLink="popular" routerLinkActive="active-link">Popular</button>
+    </div>
+    
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <!-- ... (diğer kodlar) ... -->
+
+        <div *ngIf="movieCategories.nowPlayingMovies && movieCategories.nowPlayingMovies.length > 0">
+        <div class="movie-list">
+         <div class="row">
+        <div *ngFor="let movie of movieCategories.nowPlayingMovies" class="col-4 mb-3">
+        <!-- Film resmine tıklanınca movie-details sayfasına yönlendirme -->
+        <a [routerLink]="['/movie-details', movie.id]">
+          <img src="https://image.tmdb.org/t/p/original/{{ movie.backdrop_path }}" class="d-block w-100" alt="...">
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ... (diğer kodlar) ... -->
+
+        </div>
+      </div>
+    </div>
+    
+  
+   
+  </div>
+  </div>
+ 
+
+  
+    
+  
+

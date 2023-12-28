@@ -1,0 +1,11 @@
+<div class="container mt-5">
+    <div class="row p-5">
+      <div class="col-lg-8">
+        <h2 class="text-white">Abouts</h2>
+        <div class="about" *ngFor="let About of getMovieAboutMovieResult">
+            <p>Title: {{ getMovieAboutMovieResult.original_title }}</p>
+            <p>Release Date: {{ getMovieAboutMovieResult.release_date }}</p>
+        </div>
+      </div>
+    </div>
+  </div>

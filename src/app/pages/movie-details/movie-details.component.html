@@ -1,0 +1,21 @@
+<div id="profile-upper">
+  <div id="profile-banner-image" *ngIf="getMovieDetailResult.poster_path"></div>
+  <img src="https://image.tmdb.org/t/p/original/{{ getMovieDetailResult.backdrop_path }}" class="img-fluid">
+</div>
+<div id="profile-d">
+  <div id="profile-pic">
+    <img src="https://image.tmdb.org/t/p/original/{{ getMovieDetailResult.poster_path }}" class="img-fluid">
+  </div>
+</div>
+
+<div class="categories">
+  <a (click)="OnAboutButtonClick()"  routerLinkActive="active-link">About</a>
+  <a (click)="OnReviewButtonClick()" routerLinkActive="active-link">Reviews</a>
+  <a (click)="onCastButtonClick()" routerLinkActive="active-link">Cast</a>
+</div>
+<app-cast *ngIf="selectedTabContent === 'cast'" [movieId]="getMovieCastResult?.id"></app-cast>
+<app-review *ngIf="selectedTabContent === 'review'" [movieId]="getMovieReviewResult?.id"></app-review>
+<app-aboutmovie *ngIf="selectedTabContent === 'about'" [movieId]="getMovieAboutMovieResult?.id"></app-aboutmovie>
+<div #bottomRef></div>
+<div #reviewRef></div>
+<div #aboutRef></div>

@@ -1,0 +1,173 @@
+
+
+.categories {
+  display: flex;
+  justify-content: space-around;
+  background-color: #242A32;
+  padding: 1px;
+}
+
+.categories button {
+  text-decoration: none;
+  color: white;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.categories button:hover {
+  text-decoration: underline;
+}
+
+.active-link {
+  text-decoration: underline;
+}
+
+
+.header {
+  text-align: center;
+  color: aliceblue;
+  font-size: 20px;
+}
+
+.carousel-inner {
+  display: flex;
+  flex-wrap: nowrap;
+  width: 100%;
+  height: 50%;
+}
+
+.movie-list img {
+  width: 100%;
+  height: 120%;
+  object-fit: cover;
+  border-radius: 16px;
+  margin-bottom: 40px; /* İstediğiniz boşluk değerini burada belirleyebilirsiniz */
+}
+
+
+.carousel-item {
+  width: 300px;
+  height: 170px;
+  flex: 0 0 auto;
+  transition: -webkit-transform 0.6s ease;
+  transition: transform 0.6s ease;
+  overflow: hidden; /* Resimlerin oval kenarlarından taşmasını önlemek için */
+  border-radius: 16px; /* Kenarları oval yapmak için */
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 17px;
+}
+
+.carousel-caption {
+  position: relative;
+  left: 50%;
+  top: -50px;
+  transform: translateX(-50%);
+  background: #242A32; 
+  padding: 10px;
+  color: #242A32;
+}
+.film-order {
+  position:absolute;
+  bottom: 0px; 
+  left: 0px; 
+  font-size: 100px;
+  font-weight: bold;
+  color: #333;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 5%;
+}
+.bottom-buttons {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+  background-color: #333; /* Butonları belirginleştirmek için arkaplan rengi ekleyebilirsiniz */
+  position: sticky;
+  bottom: 0; /* Ekranın altına sabitleme */
+}
+
+.bottom-buttons button {
+  padding: 5px 10px;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+
+/* Güncellenmiş stil ekleyin */
+.bottom-buttons-container {
+  display: flex;
+  justify-content: space-around;
+  padding: 4px; /* Küçük bir padding ekleyin */
+  background-color: #242A32; /* Altta bulunan alanın arkaplan rengi */
+  position: sticky;
+  bottom: 0;
+  z-index: 1; /* Diğer öğelerin üzerine çıkmasını sağlamak için z-index ekleyin */
+}
+
+.bottom-buttons-container button {
+  padding: 5px 8px; /* Boyutları biraz küçültün */
+  color: #808080; /* Gri renk kullanın */
+  background-color: #242A32; /* Arkaplan rengini düzenleyin */
+  border: none;
+  cursor: pointer;
+}
+
+.bottom-buttons-container button:hover {
+  text-decoration: underline; /* Hover durumunda altı çizili olsun */
+}
+/* Arama kutusu ve butonu stilini özelleştirme */
+/* Arama kutusu ve butonu stilini özelleştirme */
+.navbar {
+  padding: 15px;
+  background-color: #242A32; /* Navbar rengini ayarlayalım */
+}
+
+.form-control {
+  width: 200px;
+  background-color: #242A32; /* Arama kutusunun arka plan rengini ayarlayalım */
+  border: 1px solid #333; /* Arama kutusu çerçeve rengini ayarlayalım */
+  color: #242A32; /* Arama kutusu metin rengini beyaz yapalım */
+}
+
+.btn {
+  margin-left: 10px; /* Buton ile arama kutusu arasına biraz boşluk ekleyelim */
+  background-color: #242A32; /* Butonun arka plan rengini ayarlayalım */
+  border: 1px solid #333; /* Buton çerçeve rengini ayarlayalım */
+  color: white; /* Buton metin rengini beyaz yapalım */
+}
+
+.btn:hover {
+  background-color: #333; /* Butonun üzerine gelindiğinde arka plan rengini değiştirelim */
+}
+.input-group {
+  position: relative;
+  margin-bottom: 1rem;
+  
+  background-color: #808080;
+}
+
+/* Input Alanı */
+.form-control {
+  border-radius: 0; /* Input kenarlarını düzleştirebilirsiniz */
+}
+
+/* Search Butonu */
+.btn-outline-secondary {
+  border-radius: 0; /* Buton kenarlarını düzleştirebilirsiniz */
+}
+
+/* İsteğe Bağlı: Input ve Butonu Genişletebilirsiniz */
+.input-group input,
+.input-group button {
+  flex: 1;
+  color: #808080;
+}
